@@ -6,12 +6,18 @@
   <div class="container">
     <header>
       <h1>Dear Beta</h1>
-      <form class="new-task">
-    <input type="text" name="text" placeholder="Type to add new tasks" />
-  </form>
+
+		<label class="hide-completed">
+		  <input type="checkbox" checked="{{hideCompleted}}" />
+		  Hide Completed Tasks
+		</label>
+
+	    <form class="new-task">
+	    	<input type="text" name="text" placeholder="Type to add new tasks" />
+	  	</form>
     </header>
 
-<h2>Hint List</h2>
+<h2>Hint List ({{incompleteCount}})</h2>
     <ul>
       {{#each tasks}}
         {{> task}}
